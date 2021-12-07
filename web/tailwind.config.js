@@ -14,6 +14,7 @@ module.exports = {
         'yellow-1': 'hsla(41, 99%, 47%, 1)',
         'red-1': 'hsla(10, 69%, 60%, 1)',
         'gray-1': 'hsla(220, 7%, 44%, 1)',
+        'light-blue-1': 'hsla(203, 74%, 63%, 1)',
       }),
       textColor: (theme) => ({
         ...theme('colors'),
@@ -26,6 +27,7 @@ module.exports = {
         'yellow-1': 'hsla(41, 99%, 47%, 1)',
         'red-1': 'hsla(10, 69%, 60%, 1)',
         'gray-1': 'hsla(220, 7%, 44%, 1)',
+        'light-blue-1': 'hsla(203, 74%, 63%, 1)',
       }),
       backgroundImage: {
         'button-subscribe': 'linear-gradient(180deg, #FF946D 0%, #FF7D68 100%)',
@@ -37,20 +39,32 @@ module.exports = {
       },
       width: {
         '3.25rem': '52px',
+        '19.6875rem': '315px',
         '24.0625rem': '385px',
+        88.5: '384px',
+        98.75: '395px',
+        121.25: '485px',
+        126: '504px',
       },
       height: {
         '3.25rem': '52px',
+        88.5: '384px',
       },
       fontSize: {
         '1.0625rem': '17px',
       },
+      spacing: {
+        14.75: '59px',
+        17.75: '71px',
+      },
       lineHeight: {
+        16: '64px',
         '1.4375rem': '23px',
         '1.875rem': '30px',
         '5.5625rem': '89px',
       },
       borderRadius: {
+        2.5: '10px',
         '0.3125rem': '5px',
         '2.25rem': '36px',
       },
@@ -61,17 +75,18 @@ module.exports = {
       boxShadow: {
         primary:
           '0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481)',
+        secondary:
+          '0px 1.8518518209457397px 3.1481480598449707px 0px hsla(0, 0%, 0%, 0),0px 8.148148536682129px 6.518518447875977px 0px hsla(0, 0%, 0%, 0.01),0px 20px 13px 0px hsla(0, 0%, 0%, 0.01), 0px 38.51852035522461px 25.481481552124023px 0px hsla(0, 0%, 0%, 0.01),0px 64.81481170654297px 46.85185241699219px 0px hsla(0, 0%, 0%, 0.02),0px 100px 80px 0px hsla(0, 0%, 0%, 0.02)',
       },
       zIndex: {
         '-1': '-1',
       },
-    },
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
+      gridTemplateColumns: {
+        'custom-3fr': 'repeat(3, 314px)',
+      },
+      blur: {
+        37.5: '150px',
+      },
     },
   },
   variants: {

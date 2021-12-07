@@ -7,7 +7,7 @@
 @layer utilities {
   body {
     position: relative;
-    background: url('../images/decore.svg') no-repeat top right fixed,
-      url('../images/blur-effect.svg') no-repeat top left fixed;
+    background: url('../images/decore.svg') no-repeat top right,
+      url('../images/blur-effect.svg') no-repeat top left;
   }
 }
