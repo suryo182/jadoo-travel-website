@@ -10,4 +10,9 @@
     background: url('../images/decore.svg') no-repeat top right,
       url('../images/blur-effect.svg') no-repeat top left;
   }
+  .subscribe {
+    background: url('../images/subscribe-pattern-right.svg') no-repeat top right,
+      url('../images/subscribe-pattern-bottom.svg') no-repeat bottom left;
+    background-color: hsla(254, 74%, 91%, 0.2);
+  }
 }

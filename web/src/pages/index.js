@@ -17,6 +17,16 @@ import client3 from '../images/client-3.png';
 import client4 from '../images/client-4.png';
 import client5 from '../images/client-5.png';
 
+import subLogo from '../images/subscribe-message.png';
+import footerLogo from '../images/jadoo-footer-logo.png';
+
+import appleLogo from '../images/apple-logo.png';
+import googleLogo from '../images/google-play-logo.png';
+
+import fbLogo from '../images/facebook-logo.png';
+import twitterLogo from '../images/twitter-logo.png';
+import igLogo from '../images/ig-logo.png';
+
 const IndexPage = () => {
   return (
     <>
@@ -720,7 +730,118 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="px-36 py-16 mb-44 rounded-bl-5 rounded-br-5 rounded-tr-5 rounded-tl-32.25 subscribe relative">
+          <img
+            src={subLogo}
+            className="absolute right-0 transform -translate-y-1/4 translate-x-1/4 top-0"
+          />
+          <h3 className="text-center font-poppins text-3xl font-semibold text-blue-1 leading-13.5 mb-20">
+            Subscribe to get information, latest news and other <br />
+            interesting offers about Jadoo
+          </h3>
+          <div className="flex gap-x-6 max-w-156.25 mx-auto">
+            <div className="relative w-full">
+              <svg
+                width="21"
+                height="18"
+                viewBox="0 0 21 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute transform -translate-y-1/2 top-1/2 left-9"
+              >
+                <path
+                  d="M4 6L9.4 10.05C9.75556 10.3167 10.2444 10.3167 10.6 10.05L16 6"
+                  stroke="#39425D"
+                  stroke-linecap="round"
+                />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="20"
+                  height="17"
+                  rx="4.5"
+                  stroke="#39425D"
+                />
+              </svg>
+
+              <input
+                className="py-6 pl-20 pr-9 w-full rounded-2.5 outline-none"
+                placeholder="Your Email"
+              />
+            </div>
+            <button className="py-5 px-12 bg-button-subscribe rounded-2.5 font-semibold  text-lg font-open-sans text-white">
+              Subscribe
+            </button>
+          </div>
+        </section>
       </main>
+
+      <footer className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mb-24 px-10">
+        <div className="grid grid-cols-footer-grid mb-20">
+          <div>
+            <img src={footerLogo} className="w-38 h-auto mb-3" />
+            <span className="font-poppins text-xs font-medium text-blue-1">
+              Book your trip in minute, get full <br /> Control for much longer.
+            </span>
+          </div>
+          <div>
+            <h3 className="mb-8 font-bold text-xl">Company</h3>
+            <ul className="flex flex-col gap-y-3">
+              <li className="text-blue-1 font-poppins text-lg">About</li>
+              <li className="text-blue-1 font-poppins text-lg">Career</li>
+              <li className="text-blue-1 font-poppins text-lg">Mobile</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-8 font-bold text-xl">Contact</h3>
+            <ul className="flex flex-col gap-y-3">
+              <li className="text-blue-1 font-poppins text-lg">Help/FAQ</li>
+              <li className="text-blue-1 font-poppins text-lg">Press</li>
+              <li className="text-blue-1 font-poppins text-lg">Affiliates</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-8 font-bold text-xl">More</h3>
+            <ul className="flex flex-col gap-y-3">
+              <li className="text-blue-1 font-poppins text-lg">Airlinefees</li>
+              <li className="text-blue-1 font-poppins text-lg">Airline</li>
+              <li className="text-blue-1 font-poppins text-lg">
+                Low fare tips
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="mb-7 flex gap-x-6 justify-center">
+              <a className="cursor-pointer">
+                <div className="w-10 h-10 shadow-logo rounded-full flex items-center justify-center">
+                  <img src={fbLogo} />
+                </div>
+              </a>
+              <a className="cursor-pointer">
+                <div className="w-10 h-10 shadow-logo rounded-full flex items-center justify-center bg-conic-gradient">
+                  <img src={igLogo} />
+                </div>
+              </a>
+              <a className="cursor-pointer">
+                <div className="w-10 h-10 shadow-logo rounded-full flex items-center justify-center">
+                  <img src={twitterLogo} />
+                </div>
+              </a>
+            </div>
+            <span className="font-poppins text-blue-1 text-xl font-medium block mb-4 text-center">
+              Discover our app
+            </span>
+            <div className="flex gap-x-2 justify-center">
+              <img src={googleLogo} className="w-26.75 cursor-pointer" />
+              <img src={appleLogo} className="w-26.75 cursor-pointer" />
+            </div>
+          </div>
+        </div>
+        <span className="text-blue-1 font-poppins font-medium text-center text-sm block">
+          All rights reserved@jadoo.co
+        </span>
+      </footer>
     </>
   );
 };
