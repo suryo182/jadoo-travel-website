@@ -31,7 +31,7 @@ const IndexPage = () => {
   return (
     <>
       <header className="py-10">
-        <nav className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
+        <nav className="sm:max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
           <a>
             <svg
               width="116"
@@ -112,38 +112,33 @@ const IndexPage = () => {
         </nav>
       </header>
 
-      <main className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
-        <section className="grid grid-cols-2 mb-24">
-          <div className="pt-24">
-            <span className="font-poppins uppercase text-red-1 text-lg font-bold block mb-5">
+      <main className="sm:max-w-screen-sm small-screen:px-4 px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+        <section className="grid sm:grid-cols-1 md:grid-cols-2  mb-24">
+          <div className="pt-24 small-screen:pt-2 sm:pt-8">
+            <span className="font-poppins uppercase text-red-1 small-screen:text-xs  sm:text-base md:text-lg font-bold block mb-5">
               Best Destinations around the world
             </span>
-            <h1 className="font-bold font-volkhov text-7xl text-blue-3 mb-7 leading-5.5625rem relative z-10">
+            <h1 className="font-bold font-volkhov text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-3 small-screen:mb-3 mb-7 small-screen:leading-tight sm:leading-16 xl:leading-5.5625rem relative z-10">
               Travel,
-              <div className="relative inline-block w-24.0625rem">
+              <div className="relative inline-block orange-underline small-screen:w-40 sm:w-24.0625rem">
                 enjoy
-                <img
-                  src={splashImg}
-                  alt="splash img"
-                  className="absolute bottom-3 -left-10 -z-1"
-                />
               </div>
               <br />
               and live a new <br />
               and full life
             </h1>
-            <p className="font-poppins text-sm font-medium text-blue-1 leading-1.875rem">
+            <p className="font-poppins small-screen:text-xs text-sm font-medium text-blue-1 s small-screen:leading-normal sm:leading-1.875rem">
               Built Wicket longer admire do barton vanity itself do in it.{' '}
               <br />
               Preferred to sportsmen it engrossed listening. Park gate <br />{' '}
               sell they west hard for the.
             </p>
-            <div className="mt-7 flex gap-x-10">
-              <button className="px-5 py-4 bg-yellow-1 rounded-lg text-white font-bold text-base font-open-sans">
+            <div className="mt-7 small-screen:mt-4 flex gap-x-10 small-screen:gap-y-2 small-screen:flex-col small-screen:items-center">
+              <button className="px-5 small-screen:px-4 py-4 small-screen:py-3 bg-yellow-1 rounded-lg text-white font-bold small-screen:text-xs text-base font-open-sans small-screen:w-1/2">
                 Find Out More
               </button>
-              <a className="flex items-center gap-x-5 text-gray-1 text-base font-medium">
-                <div className="w-3.25rem h-3.25rem bg-red-1 rounded-full flex justify-center items-center">
+              <a className="flex items-center gap-x-5 text-gray-1 text-base font-medium small-screen:w-1/2 small-screen:text-xs cursor-pointer">
+                <div className="w-3.25rem h-3.25rem small-screen:w-8 small-screen:h-8 bg-red-1 rounded-full flex justify-center items-center">
                   <svg
                     width="12"
                     height="13"
@@ -753,7 +748,7 @@ const IndexPage = () => {
                 <path
                   d="M4 6L9.4 10.05C9.75556 10.3167 10.2444 10.3167 10.6 10.05L16 6"
                   stroke="#39425D"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                 />
                 <rect
                   x="0.5"
@@ -788,25 +783,41 @@ const IndexPage = () => {
           <div>
             <h3 className="mb-8 font-bold text-xl">Company</h3>
             <ul className="flex flex-col gap-y-3">
-              <li className="text-blue-1 font-poppins text-lg">About</li>
-              <li className="text-blue-1 font-poppins text-lg">Career</li>
-              <li className="text-blue-1 font-poppins text-lg">Mobile</li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                About
+              </li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Career
+              </li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Mobile
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="mb-8 font-bold text-xl">Contact</h3>
             <ul className="flex flex-col gap-y-3">
-              <li className="text-blue-1 font-poppins text-lg">Help/FAQ</li>
-              <li className="text-blue-1 font-poppins text-lg">Press</li>
-              <li className="text-blue-1 font-poppins text-lg">Affiliates</li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Help/FAQ
+              </li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Press
+              </li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Affiliates
+              </li>
             </ul>
           </div>
           <div>
             <h3 className="mb-8 font-bold text-xl">More</h3>
             <ul className="flex flex-col gap-y-3">
-              <li className="text-blue-1 font-poppins text-lg">Airlinefees</li>
-              <li className="text-blue-1 font-poppins text-lg">Airline</li>
-              <li className="text-blue-1 font-poppins text-lg">
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Airlinefees
+              </li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+                Airline
+              </li>
+              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
                 Low fare tips
               </li>
             </ul>

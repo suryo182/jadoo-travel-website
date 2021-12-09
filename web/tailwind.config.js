@@ -102,6 +102,9 @@ module.exports = {
       blur: {
         37.5: '150px',
       },
+      screens: {
+        'small-screen': { max: '320px' },
+      },
     },
   },
   variants: {
