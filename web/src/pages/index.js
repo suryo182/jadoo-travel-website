@@ -26,20 +26,19 @@ import googleLogo from '../images/google-play-logo.png';
 import fbLogo from '../images/facebook-logo.png';
 import twitterLogo from '../images/twitter-logo.png';
 import igLogo from '../images/ig-logo.png';
+import hamburgerLogo from '../images/iPhone 11 Pro/Icon.png';
 
 const IndexPage = () => {
   return (
     <>
       <header className="py-10">
-        <nav className="sm:max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
-          <a>
+        <nav className="xs:px-4 sm:max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
+          <a className="w-20">
             <svg
-              width="116"
-              height="35"
               viewBox="0 0 116 35"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="cursor-pointer"
+              className="w-full h-full"
             >
               <path
                 d="M74.9999 29L84.4999 32L92.4999 24L102.5 31L113 29L108.5 14.5L92.4999 19.5L83.4999 14.5L73.9999 16L74.9999 29Z"
@@ -67,9 +66,9 @@ const IndexPage = () => {
               />
             </svg>
           </a>
-          <div className="flex gap-x-11">
+          <div className="flex gap-x-11 bg-yellow-300 fixed w-full left-0 top-0 py-3 px-0">
             <div className="flex gap-x-20">
-              <ul className="flex gap-x-12 items-center">
+              <ul className="flex-col md:flex-row gap-x-12 items-center">
                 <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-primary">
                   Destinations
                 </li>
@@ -109,36 +108,40 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+
+          <div>
+            <img src={hamburgerLogo} className="w-7 h-auto cursor-pointer" />
+          </div>
         </nav>
       </header>
 
-      <main className="sm:max-w-screen-sm small-screen:px-4 px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+      <main className="sm:max-w-screen-sm xs:px-4 px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
         <section className="grid sm:grid-cols-1 md:grid-cols-2  mb-24">
-          <div className="pt-24 small-screen:pt-2 sm:pt-8">
-            <span className="font-poppins uppercase text-red-1 small-screen:text-xs  sm:text-base md:text-lg font-bold block mb-5">
+          <div className="pt-24 xs:pt-2 sm:pt-8">
+            <span className="font-poppins uppercase text-red-1 xs:text-xs  sm:text-base md:text-lg font-bold block mb-5">
               Best Destinations around the world
             </span>
-            <h1 className="font-bold font-volkhov text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-3 small-screen:mb-3 mb-7 small-screen:leading-tight sm:leading-16 xl:leading-5.5625rem relative z-10">
+            <h1 className="font-bold font-volkhov text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-3 xs:mb-3 mb-7 xs:leading-tight sm:leading-16 xl:leading-5.5625rem relative z-10">
               Travel,
-              <div className="relative inline-block orange-underline small-screen:w-40 sm:w-24.0625rem">
+              <div className="relative inline-block orange-underline xs:w-40 sm:w-24.0625rem">
                 enjoy
               </div>
               <br />
               and live a new <br />
               and full life
             </h1>
-            <p className="font-poppins small-screen:text-xs text-sm font-medium text-blue-1 s small-screen:leading-normal sm:leading-1.875rem">
+            <p className="font-poppins xs:text-xs text-sm font-medium text-blue-1 s xs:leading-normal sm:leading-1.875rem">
               Built Wicket longer admire do barton vanity itself do in it.{' '}
               <br />
               Preferred to sportsmen it engrossed listening. Park gate <br />{' '}
               sell they west hard for the.
             </p>
-            <div className="mt-7 small-screen:mt-4 flex gap-x-10 small-screen:gap-y-2 small-screen:flex-col small-screen:items-center">
-              <button className="px-5 small-screen:px-4 py-4 small-screen:py-3 bg-yellow-1 rounded-lg text-white font-bold small-screen:text-xs text-base font-open-sans small-screen:w-1/2">
+            <div className="mt-7 xs:mt-4 flex gap-x-10 xs:gap-y-2 xs:flex-col xs:items-center">
+              <button className="px-5 xs:px-4 py-4 xs:py-3 bg-yellow-1 rounded-lg text-white font-bold xs:text-xs text-base font-open-sans xs:w-1/2">
                 Find Out More
               </button>
-              <a className="flex items-center gap-x-5 text-gray-1 text-base font-medium small-screen:w-1/2 small-screen:text-xs cursor-pointer">
-                <div className="w-3.25rem h-3.25rem small-screen:w-8 small-screen:h-8 bg-red-1 rounded-full flex justify-center items-center">
+              <a className="flex items-center gap-x-5 text-gray-1 text-base font-medium xs:w-1/2 xs:text-xs cursor-pointer">
+                <div className="w-3.25rem h-3.25rem xs:w-8 xs:h-8 bg-red-1 rounded-full flex justify-center items-center">
                   <svg
                     width="12"
                     height="13"

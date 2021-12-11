@@ -80,6 +80,7 @@ module.exports = {
       },
       maxWidth: {
         156.25: '625px',
+        '100%': '100%',
       },
       borderColor: (theme) => ({
         ...theme('colors'),
@@ -103,7 +104,7 @@ module.exports = {
         37.5: '150px',
       },
       screens: {
-        'small-screen': { max: '320px' },
+        xs: { max: '320px' },
       },
     },
   },
