@@ -58,10 +58,13 @@ module.exports = {
       },
       fontSize: {
         '1.0625rem': '17px',
+        7: '28px',
       },
       spacing: {
         14.75: '59px',
         17.75: '71px',
+        '100%': '100%',
+        '150%': '150%',
       },
       lineHeight: {
         13.5: '54px',
@@ -95,6 +98,7 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+        100: '100',
       },
       gridTemplateColumns: {
         'custom-3fr': 'repeat(3, 314px)',

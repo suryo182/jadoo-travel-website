@@ -27,12 +27,18 @@ import fbLogo from '../images/facebook-logo.png';
 import twitterLogo from '../images/twitter-logo.png';
 import igLogo from '../images/ig-logo.png';
 import hamburgerLogo from '../images/iPhone 11 Pro/Icon.png';
+import useToggleMenu from '../../helpers/hooks/useToggleMenu';
 
 const IndexPage = () => {
+  useToggleMenu();
+
   return (
-    <>
-      <header className="py-10">
-        <nav className="xs:px-4 sm:max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between">
+    <div id="homepage">
+      <header
+        id="header"
+        className="fixed top-0 left-0 w-full bg-yellow-700 z-100"
+      >
+        <nav className="nav xs:px-4 sm:max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between h-14">
           <a className="w-20">
             <svg
               viewBox="0 0 116 35"
@@ -66,27 +72,30 @@ const IndexPage = () => {
               />
             </svg>
           </a>
-          <div className="flex gap-x-11 bg-yellow-300 fixed w-full left-0 top-0 py-3 px-0">
-            <div className="flex gap-x-20">
-              <ul className="flex-col md:flex-row gap-x-12 items-center">
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-primary">
+          <div
+            className="flex flex-col md:flex-row gap-y-8 gap-x-11 bg-white items-center fixed h-full w-full left-0 py-14 md:py-3 px-0 z-50 -top-150% transition-all delay-300"
+            id="nav-menu"
+          >
+            <div className="flex flex-col md:flex-row gap-y-8 gap-x-20">
+              <ul className="flex flex-col md:flex-row gap-x-12 gap-y-8 items-center">
+                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
                   Destinations
                 </li>
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-primary">
+                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
                   Hotels
                 </li>
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-primary">
+                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
                   Flights
                 </li>
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-primary">
+                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
                   Bookings
                 </li>
               </ul>
-              <div className="flex gap-x-12">
-                <button className="cursor-pointer font-open-sans text-1.0625rem font-bold text-primary">
+              <div className="flex flex-col md:flex-row w-max gap-y-8 gap-x-12">
+                <button className="cursor-pointer font-open-sans text-1.0625rem font-bold text-blue-2">
                   Login
                 </button>
-                <button className="cursor-pointer font-open-sans text-1.0625rem font-bold text-primary border rounded-0.3125remrem border-primary px-5 py-2">
+                <button className="cursor-pointer font-open-sans text-1.0625rem font-bold text-blue-2 border rounded-0.3125remrem border-primary px-5 py-2">
                   Sign Up
                 </button>
               </div>
@@ -94,7 +103,7 @@ const IndexPage = () => {
             <div className="flex items-center">
               <div className="cursor-pointer  font-open-sans font-bold text-primary">
                 <div className="flex items-center">
-                  <span className="block mr-2">EN</span>
+                  <span className="block mr-2 text-blue-2">EN</span>
                   <svg
                     width="10"
                     height="6"
@@ -107,17 +116,28 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
+
+            <div
+              className="absolute top-5 right-5 z-100 cursor-pointer md:hidden"
+              id="nav-close"
+            >
+              <i className="ri-close-line text-7"></i>
+            </div>
           </div>
 
-          <div>
-            <img src={hamburgerLogo} className="w-7 h-auto cursor-pointer" />
+          <div className="flex items-center">
+            <img
+              src={hamburgerLogo}
+              className="w-7 h-auto cursor-pointer md:hidden"
+              id="nav-toggle"
+            />
           </div>
         </nav>
       </header>
 
-      <main className="sm:max-w-screen-sm xs:px-4 px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+      <main className="sm:max-w-screen-sm xs:px-4 px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-14">
         <section className="grid sm:grid-cols-1 md:grid-cols-2  mb-24">
-          <div className="pt-24 xs:pt-2 sm:pt-8">
+          <div className="pt-8 md:pt-24">
             <span className="font-poppins uppercase text-red-1 xs:text-xs  sm:text-base md:text-lg font-bold block mb-5">
               Best Destinations around the world
             </span>
@@ -419,7 +439,7 @@ const IndexPage = () => {
                 src={destination1}
                 className="w-full h-full bg-cover object-cover"
               />
-              <div className="absolute bottom-0 h-32 w-full flex justify-between gap-x-3 bg-white  pt-7 px-5 pb-10">
+              <div className="absolute bottom-0 h-32 w-full flex justify-between gap-x-3 bg-white pt-7 px-5 pb-10">
                 <div>
                   <h3 className="text-lg font-medium font-poppins text-blue-1 mb-4">
                     Rome, Italy
@@ -856,7 +876,7 @@ const IndexPage = () => {
           All rights reserved@jadoo.co
         </span>
       </footer>
-    </>
+    </div>
   );
 };
 

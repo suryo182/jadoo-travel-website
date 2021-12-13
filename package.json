@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "remixicon": "^2.5.0"
   }
 }
