@@ -29,6 +29,17 @@ import igLogo from '../images/ig-logo.png';
 import hamburgerLogo from '../images/iPhone 11 Pro/Icon.png';
 import useToggleMenu from '../../helpers/hooks/useToggleMenu';
 
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 const IndexPage = () => {
   useToggleMenu();
 
@@ -38,7 +49,7 @@ const IndexPage = () => {
         id="header"
         className="fixed top-0 left-0 w-full bg-yellow-700 z-100"
       >
-        <nav className="nav xs:px-4 sm:max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between h-14">
+        <nav className="nav px-4 max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between h-14">
           <a className="w-20">
             <svg
               viewBox="0 0 116 35"
@@ -135,33 +146,33 @@ const IndexPage = () => {
         </nav>
       </header>
 
-      <main className="sm:max-w-screen-sm xs:px-4 px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-14">
-        <section className="grid sm:grid-cols-1 md:grid-cols-2  mb-24">
+      <main className="sm:max-w-screen-sm px-4 md:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-14">
+        <section className="grid sm:grid-cols-1 md:grid-cols-2 mb-24">
           <div className="pt-8 md:pt-24">
-            <span className="font-poppins uppercase text-red-1 xs:text-xs  sm:text-base md:text-lg font-bold block mb-5">
+            <span className="font-poppins uppercase text-red-1 text-xs sm:text-base md:text-lg font-bold block mb-5 text-center md:text-left">
               Best Destinations around the world
             </span>
-            <h1 className="font-bold font-volkhov text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-blue-3 xs:mb-3 mb-7 xs:leading-tight sm:leading-16 xl:leading-5.5625rem relative z-10">
+            <h1 className="font-bold font-volkhov text-4xl md:text-6xl lg:text-7xl text-blue-3 mb-3 md:mb-7 leading-tight relative z-10 text-center md:text-left">
               Travel,
-              <div className="relative inline-block orange-underline xs:w-40 sm:w-24.0625rem">
+              <div className="relative inline-block orange-underline xs:w-40 md:w-24.0625rem">
                 enjoy
               </div>
               <br />
               and live a new <br />
               and full life
             </h1>
-            <p className="font-poppins xs:text-xs text-sm font-medium text-blue-1 s xs:leading-normal sm:leading-1.875rem">
+            <p className="font-poppins text-sm font-medium text-blue-1 s leading-normal sm:leading-1.875rem text-center md:text-left">
               Built Wicket longer admire do barton vanity itself do in it.{' '}
               <br />
               Preferred to sportsmen it engrossed listening. Park gate <br />{' '}
               sell they west hard for the.
             </p>
-            <div className="mt-7 xs:mt-4 flex gap-x-10 xs:gap-y-2 xs:flex-col xs:items-center">
-              <button className="px-5 xs:px-4 py-4 xs:py-3 bg-yellow-1 rounded-lg text-white font-bold xs:text-xs text-base font-open-sans xs:w-1/2">
+            <div className="mt-4 md:mt-7 flex gap-x-10 gap-y-4 flex-col items-center">
+              <button className="px-4 py-3 bg-yellow-1 rounded-lg text-white font-bold text-xs font-open-sans w-1/2">
                 Find Out More
               </button>
-              <a className="flex items-center gap-x-5 text-gray-1 text-base font-medium xs:w-1/2 xs:text-xs cursor-pointer">
-                <div className="w-3.25rem h-3.25rem xs:w-8 xs:h-8 bg-red-1 rounded-full flex justify-center items-center">
+              <a className="flex items-center gap-x-5 text-gray-1 font-medium w-1/2 text-xs cursor-pointer justify-center">
+                <div className="w-8 h-8 bg-red-1 rounded-full flex justify-center items-center">
                   <svg
                     width="12"
                     height="13"
@@ -179,14 +190,12 @@ const IndexPage = () => {
               </a>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative mt-4 md:mt-0">
             <svg
-              width="167"
-              height="154"
               viewBox="0 0 167 154"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute left-0 top-5"
+              className="absolute left-0 top-0 md:top-5 w-48 h-24 -z-1"
             >
               <path
                 d="M96.1744 86.8472C94.816 87.1514 93.493 87.715 92.2875 88.5024C89.1467 90.5037 87.3194 93.3604 88.2063 94.8826C89.0933 96.4047 92.3583 96.0154 95.4991 94.0141C96.7209 93.2545 97.8063 92.2837 98.6884 91.1618C99.0978 90.6197 99.1713 89.9442 98.8761 89.4393L97.7239 87.4619C97.4307 86.9554 96.8226 86.7145 96.1744 86.8472Z"
@@ -276,7 +285,7 @@ const IndexPage = () => {
               viewBox="0 0 167 154"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="absolute -right-8 top-20 -z-1"
+              className="absolute -right-10 bottom-8 md:-right-8 md:top-20 w-48 h-24 -z-1"
             >
               <path
                 d="M96.1744 86.8472C94.816 87.1514 93.493 87.715 92.2875 88.5024C89.1467 90.5037 87.3194 93.3604 88.2063 94.8826C89.0933 96.4047 92.3583 96.0154 95.4991 94.0141C96.7209 93.2545 97.8063 92.2837 98.6884 91.1618C99.0978 90.6197 99.1713 89.9442 98.8761 89.4393L97.7239 87.4619C97.4307 86.9554 96.8226 86.7145 96.1744 86.8472Z"
@@ -363,23 +372,23 @@ const IndexPage = () => {
         </section>
 
         <section className="text-center mb-24">
-          <span className="text-base font-semibold uppercase text-blue-1 font-poppins mb-2 block">
+          <span className="text-sm md:text-base font-semibold uppercase text-blue-1 font-poppins mb-2 block">
             CATEGORY
           </span>
-          <h3 className="font-volkhov text-5xl font-bold text-blue-5">
+          <h3 className="font-volkhov text-4xl md:text-5xl font-bold text-blue-5">
             We Offer Best Services
           </h3>
-          <div className="mt-16 grid grid-cols-4 gap-x-5">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-5">
             <div className="hover:shadow-primary cursor-pointer flex flex-col items-center px-10 py-12 rounded-2.25rem">
               <img
                 src={category1}
                 alt="calculated weather"
-                className="h-full w-auto"
+                className="h-auto max-w-32"
               />
               <h5 className="font-open-sans font-semibold text-blue-4 mt-6 mb-4">
                 Calculated Weather
               </h5>
-              <span className="font-poppins font-medium text-base text-blue-1">
+              <span className="font-poppins font-medium text-sm md:text-base text-blue-1">
                 Built Wicket longer admire do barton vanity itself do in it.
               </span>
             </div>
@@ -387,12 +396,12 @@ const IndexPage = () => {
               <img
                 src={category2}
                 alt="best flights"
-                className="h-full w-auto"
+                className="h-auto max-w-32"
               />
               <h5 className="font-open-sans font-semibold text-blue-4 mt-6 mb-4">
                 Best Flights
               </h5>
-              <span className="font-poppins font-medium text-base text-blue-1">
+              <span className="font-poppins font-medium text-sm md:text-base text-blue-1">
                 Engrossed listening. Park gate sell they west hard for the.
               </span>
             </div>
@@ -400,12 +409,12 @@ const IndexPage = () => {
               <img
                 src={category3}
                 alt="local events"
-                className="h-full w-auto"
+                className="h-auto max-w-32"
               />
               <h5 className="font-open-sans font-semibold text-blue-4 mt-6 mb-4">
                 Local Events
               </h5>
-              <span className="font-poppins font-medium text-base text-blue-1">
+              <span className="font-poppins font-medium text-sm md:text-base text-blue-1">
                 Barton vanity itself do in it. Preferd to men it engrossed
                 listening.
               </span>
@@ -414,7 +423,7 @@ const IndexPage = () => {
               <img
                 src={category4}
                 alt="customization"
-                className="h-full w-auto"
+                className="h-auto max-w-32"
               />
               <h5 className="font-open-sans font-semibold text-blue-4 mt-6 mb-4">
                 Customization
@@ -433,8 +442,13 @@ const IndexPage = () => {
           <h3 className="font-volkhov text-5xl font-bold text-blue-5">
             Top Destinations
           </h3>
-          <div className="mt-16 grid grid-cols-custom-3fr gap-x-8 justify-center">
-            <div className="relative rounded-3xl shadow-secondary overflow-hidden cursor-pointer">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={32}
+            loop={true}
+            className="mt-16 grid grid-cols-custom-3fr justify-center"
+          >
+            <SwiperSlide className="relative rounded-3xl overflow-hidden cursor-pointer">
               <img
                 src={destination1}
                 className="w-full h-full bg-cover object-cover"
@@ -468,9 +482,12 @@ const IndexPage = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="relative rounded-3xl shadow-secondary overflow-hidden cursor-pointer">
-              <img src={destination2} />
+            </SwiperSlide>
+            <SwiperSlide className="relative rounded-3xl overflow-hidden cursor-pointer">
+              <img
+                src={destination2}
+                className="w-full h-full bg-cover object-cover"
+              />
               <div className="absolute bottom-0 h-32 w-full flex justify-between bg-white pt-7 px-5 pb-10">
                 <div>
                   <h3 className="text-lg font-medium font-poppins text-blue-1 mb-4">
@@ -500,9 +517,12 @@ const IndexPage = () => {
                   </span>
                 </div>
               </div>
-            </div>
-            <div className="relative rounded-3xl shadow-secondary overflow-hidden cursor-pointer">
-              <img src={destination3} />
+            </SwiperSlide>
+            <SwiperSlide className="relative rounded-3xl overflow-hidden cursor-pointer">
+              <img
+                src={destination3}
+                className="w-full h-full bg-cover object-cover"
+              />
               <div className="absolute bottom-0 h-32 w-full flex justify-between bg-white pt-7 px-5 pb-10">
                 <div>
                   <h3 className="font-medium text-blue-1 text-lg font-poppins mb-4">
@@ -532,8 +552,8 @@ const IndexPage = () => {
                   </span>
                 </div>
               </div>
-            </div>
-          </div>
+            </SwiperSlide>
+          </Swiper>
         </section>
 
         <section className="flex mb-44">
