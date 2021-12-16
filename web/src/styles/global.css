@@ -47,4 +47,49 @@
       height: 5rem;
     }
   }
+
+  .swiper .swiper-button-next {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 80px;
+    width: 14px;
+    height: 7px;
+    margin-top: auto;
+    background-image: url('../images/arrow-down-2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: hsla(271, 25%, 24%, 1);
+    object-fit: cover;
+  }
+
+  .swiper .swiper-button-prev::after {
+    content: '';
+  }
+
+  .swiper .swiper-button-prev {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 20px;
+    width: 14px;
+    height: 7px;
+    margin-top: auto;
+    background-image: url('../images/arrow-up.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: hsla(271, 25%, 24%, 1);
+    object-fit: cover;
+  }
+
+  .swiper .swiper-button-next::after {
+    content: '';
+  }
+
+  .swiper .swiper-button-disabled {
+    color: hsla(267, 8%, 74%, 1);
+    opacity: 1;
+  }
 }

@@ -30,7 +30,7 @@ import hamburgerLogo from '../images/iPhone 11 Pro/Icon.png';
 import useToggleMenu from '../../helpers/hooks/useToggleMenu';
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -42,6 +42,8 @@ import 'swiper/css/scrollbar';
 
 const IndexPage = () => {
   useToggleMenu();
+
+  SwiperCore.use([Navigation]);
 
   return (
     <div id="homepage">
@@ -278,7 +280,11 @@ const IndexPage = () => {
                 fill="#3A556A"
               />
             </svg>
-            <img src={imageTraveller} alt="image traveller" />
+            <img
+              src={imageTraveller}
+              alt="image traveller"
+              className="w-112.5 md:w-full h-auto"
+            />
             <svg
               width="167"
               height="154"
@@ -436,14 +442,14 @@ const IndexPage = () => {
         </section>
 
         <section className="text-center mb-44">
-          <span className="text-base font-semibold uppercase text-blue-1 font-poppins mb-2 block">
+          <span className="text-sm md:text-base font-semibold uppercase text-blue-1 font-poppins mb-2 block">
             Top Selling
           </span>
-          <h3 className="font-volkhov text-5xl font-bold text-blue-5">
+          <h3 className="font-volkhov text-4xl md:text-5xl font-bold text-blue-5">
             Top Destinations
           </h3>
           <Swiper
-            slidesPerView={3}
+            slidesPerView="auto"
             spaceBetween={32}
             loop={true}
             className="mt-16 grid grid-cols-custom-3fr justify-center"
@@ -556,16 +562,16 @@ const IndexPage = () => {
           </Swiper>
         </section>
 
-        <section className="flex mb-44">
-          <div className="w-3/5">
-            <span className="block text-blue-1 font-poppins font-semibold text-lg mb-4">
+        <section className="flex flex-col md:flex-row mb-44 gap-y-12">
+          <div className="w-full md:w-3/5">
+            <span className="block text-blue-1 font-poppins font-semibold text-md md:text-lg mb-4 text-center sm:text-left">
               Easy and Fast
             </span>
-            <h3 className="font-volkhov font-bold text-blue-5 text-5xl leading-16 mb-8">
+            <h3 className="font-volkhov font-bold text-blue-5 text-4xl md:text-5xl mb-8 text-center sm:text-left">
               Book your next trip <br />
               in 3 easy steps
             </h3>
-            <div className="flex flex-col gap-y-12 w-98.75">
+            <div className="flex flex-col gap-y-12 md:w-98.75">
               <div className="flex gap-x-5 items-center">
                 <div className="w-12 h-12">
                   <svg
@@ -695,14 +701,14 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex self-center justify-center w-2/5">
+          <div className="flex self-center justify-center w-full md:w-2/5">
             <div className="w-121.25 h-auto relative">
               <img
                 src={bookTripImg}
                 className="w-full h-full bg-cover object-cover z-10"
                 alt="book trip"
               />
-              <div className="absolute w-88.5 h-88.5 bg-light-blue-1 -top-14.75 right-17.75 filter blur-37.5 -z-1 bg-opacity-80"></div>
+              <div className="absolute w-40 h-40 lg:w-88.5 lg:h-88.5 bg-light-blue-1 -top-14.75 right-17.75 filter blur-37.5 -z-1 bg-opacity-80"></div>
             </div>
           </div>
         </section>
@@ -717,8 +723,12 @@ const IndexPage = () => {
               about Us.
             </h3>
           </div>
-          <div className="w-2/5">
-            <div className="w-126 py-7 px-8 shadow-primary rounded-2.5">
+          <Swiper
+            direction="vertical"
+            navigation={true}
+            className="w-2/5 h-61.25 rounded-2.5 relative"
+          >
+            <SwiperSlide className="w-126 py-7 px-8 rounded-2.5">
               <p className="font-poppins text-base text-blue-1 font-medium mb-8">
                 “On the Windows talking painted pasture yet its <br /> express
                 parties use. Sure last upon he same as
@@ -730,8 +740,21 @@ const IndexPage = () => {
               <span className="font-poppins text-sm text-blue-1 font-medium">
                 Lahore, Pakistan
               </span>
-            </div>
-          </div>
+            </SwiperSlide>
+            <SwiperSlide className="w-126 py-7 px-8 rounded-2.5">
+              <p className="font-poppins text-base text-blue-1 font-medium mb-8">
+                “On the Windows talking painted pasture yet its <br /> express
+                parties use. Sure last upon he same as
+                <br /> knew next. Of believed or diverted no.”
+              </p>
+              <h5 className="font-poppins text-lg text-blue-1 font-semibold mb-1">
+                Mike Taylor
+              </h5>
+              <span className="font-poppins text-sm text-blue-1 font-medium">
+                Lahore, Pakistan
+              </span>
+            </SwiperSlide>
+          </Swiper>
         </section>
 
         <section className="mb-24">
