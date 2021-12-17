@@ -713,23 +713,36 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section className="flex mb-24">
-          <div className="w-3/5">
-            <span className="font-poppins text-lg font-semibold uppercase text-blue-1">
+        <section className="flex flex-col md:flex-row mb-24">
+          <div className="w-full md:w-3/5 text-center md:text-left">
+            <span className="font-poppins text-base lg:text-lg font-semibold uppercase text-blue-1">
               Testimonials
             </span>
-            <h3 className="font-volkhov text-5xl font-bold text-blue-5 leading-16">
-              What people say <br />
+            <h3 className="font-volkhov text-4xl lg:text-5xl font-bold text-blue-5">
+              What people say <br className="hidden md:block" />
               about Us.
             </h3>
           </div>
           <Swiper
             direction="vertical"
             navigation={true}
-            className="w-2/5 h-61.25 rounded-2.5 relative"
+            className="w-full md:w-2/5 h-61.25 relative mt-6 md:mt-0"
           >
-            <SwiperSlide className="w-126 py-7 px-8 rounded-2.5">
-              <p className="font-poppins text-base text-blue-1 font-medium mb-8">
+            <SwiperSlide className="w-126 py-7 px-8">
+              <p className="font-poppins text-sm lg:text-base text-blue-1 font-medium mb-8">
+                “On the Windows talking painted pasture yet its <br /> express
+                parties use. Sure last upon he same as
+                <br /> knew next. Of believed or diverted no.”
+              </p>
+              <h5 className="font-poppins text-base lg:text-lg text-blue-1 font-semibold mb-1">
+                Mike Taylor
+              </h5>
+              <span className="font-poppins text-sm text-blue-1 font-medium">
+                Lahore, Pakistan
+              </span>
+            </SwiperSlide>
+            <SwiperSlide className="w-126 py-7 px-8">
+              <p className="font-poppins text-sm lg:text-base text-blue-1 font-medium mb-8">
                 “On the Windows talking painted pasture yet its <br /> express
                 parties use. Sure last upon he same as
                 <br /> knew next. Of believed or diverted no.”
@@ -741,8 +754,8 @@ const IndexPage = () => {
                 Lahore, Pakistan
               </span>
             </SwiperSlide>
-            <SwiperSlide className="w-126 py-7 px-8 rounded-2.5">
-              <p className="font-poppins text-base text-blue-1 font-medium mb-8">
+            <SwiperSlide className="w-126 py-7 px-8">
+              <p className="font-poppins text-sm lg:text-base text-blue-1 font-medium mb-8">
                 “On the Windows talking painted pasture yet its <br /> express
                 parties use. Sure last upon he same as
                 <br /> knew next. Of believed or diverted no.”
@@ -758,46 +771,46 @@ const IndexPage = () => {
         </section>
 
         <section className="mb-24">
-          <div className="flex items-center gap-x-14 justify-center">
+          <div className="flex flex-wrap items-center gap-x-14 justify-center">
             <div className="cursor-pointer">
               <img
                 src={client1}
-                className="w-full h-auto mix-blend-luminosity"
+                className="w-full h-auto filter saturate-0 hover:saturate-100"
               />
             </div>
             <div className="cursor-pointer">
               <img
                 src={client2}
-                className="w-full h-auto mix-blend-luminosity"
+                className="w-full h-auto filter saturate-0 hover:saturate-100"
               />
             </div>
             <div className="cursor-pointer">
               <img
                 src={client3}
-                className="w-full h-auto mix-blend-luminosity"
+                className="w-full h-auto filter saturate-0 hover:saturate-100"
               />
             </div>
             <div className="cursor-pointer">
               <img
                 src={client4}
-                className="w-full h-auto mix-blend-luminosity"
+                className="w-full h-auto filter saturate-0 hover:saturate-100"
               />
             </div>
             <div className="cursor-pointer">
               <img
                 src={client5}
-                className="w-full h-auto mix-blend-luminosity"
+                className="w-full h-auto filter saturate-0 hover:saturate-100"
               />
             </div>
           </div>
         </section>
 
-        <section className="px-36 py-16 mb-44 rounded-bl-5 rounded-br-5 rounded-tr-5 rounded-tl-32.25 subscribe relative">
+        <section className="px-16 py-8 md:px-36 md:py-16 mb-44 rounded-bl-5 rounded-br-5 rounded-tr-5 rounded-tl-32.25 subscribe relative">
           <img
             src={subLogo}
             className="absolute right-0 transform -translate-y-1/4 translate-x-1/4 top-0"
           />
-          <h3 className="text-center font-poppins text-3xl font-semibold text-blue-1 leading-13.5 mb-20">
+          <h3 className="text-center font-poppins text-base md:text-3xl font-semibold text-blue-1 lg:leading-13.5 mb-20">
             Subscribe to get information, latest news and other <br />
             interesting offers about Jadoo
           </h3>
@@ -827,11 +840,11 @@ const IndexPage = () => {
               </svg>
 
               <input
-                className="py-6 pl-20 pr-9 w-full rounded-2.5 outline-none"
+                className="py-3 pl-16 pr-3 md:py-6 md:pl-20 md:pr-9 w-full rounded-2.5 outline-none"
                 placeholder="Your Email"
               />
             </div>
-            <button className="py-5 px-12 bg-button-subscribe rounded-2.5 font-semibold  text-lg font-open-sans text-white">
+            <button className="py-1 md:py-5 px-6 md:px-12 bg-button-subscribe rounded-2.5 font-semibold text-base md:text-lg font-open-sans text-white">
               Subscribe
             </button>
           </div>
