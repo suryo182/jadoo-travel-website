@@ -30,7 +30,12 @@ import hamburgerLogo from '../images/iPhone 11 Pro/Icon.png';
 import useToggleMenu from '../../helpers/hooks/useToggleMenu';
 
 // import Swiper core and required modules
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from 'swiper/react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
