@@ -28,6 +28,7 @@ import twitterLogo from '../images/twitter-logo.png';
 import igLogo from '../images/ig-logo.png';
 import hamburgerLogo from '../images/iPhone 11 Pro/Icon.png';
 import useToggleMenu from '../../helpers/hooks/useToggleMenu';
+import useChangeBgHeader from '../../helpers/hooks/useChangeBgHeader';
 
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -42,6 +43,7 @@ import 'swiper/css/scrollbar';
 
 const IndexPage = () => {
   useToggleMenu();
+  useChangeBgHeader();
 
   SwiperCore.use([Navigation]);
 
@@ -49,7 +51,7 @@ const IndexPage = () => {
     <div id="homepage">
       <header
         id="header"
-        className="fixed top-0 left-0 w-full bg-yellow-700 z-100"
+        className="fixed top-0 left-0 w-full z-100 transition-all duration-300"
       >
         <nav className="nav px-4 max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between h-14">
           <a className="w-20">
@@ -86,7 +88,7 @@ const IndexPage = () => {
             </svg>
           </a>
           <div
-            className="flex flex-col md:flex-row gap-y-8 gap-x-11 bg-white items-center fixed h-full w-full left-0 py-14 md:py-3 px-0 z-50 -top-150% transition-all delay-300"
+            className="flex flex-col md:flex-row gap-y-8 gap-x-11 bg-yellow-2 items-center fixed h-full w-full left-0 py-14 md:py-3 px-0 z-50 -top-150% transition-all duration-300"
             id="nav-menu"
           >
             <div className="flex flex-col md:flex-row gap-y-8 gap-x-20">

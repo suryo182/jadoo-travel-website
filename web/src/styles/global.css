@@ -41,14 +41,6 @@
     top: 0;
   }
 
-  .hide-scroll {
-    overflow: hidden;
-  }
-
-  .show-scroll {
-    overflow: auto;
-  }
-
   @media screen and (min-width: 768px) {
     .nav {
       height: 5rem;
@@ -99,4 +91,10 @@
     color: hsla(267, 8%, 74%, 1);
     opacity: 1;
   }
+}
+
+/* Change background header */
+.scroll-header {
+  background: hsla(38, 100%, 93%, 1);
+  box-shadow: 0 1px 4px hsla(152, 4%, 15%, 0.1);
 }

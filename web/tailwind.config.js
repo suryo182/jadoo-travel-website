@@ -12,6 +12,7 @@ module.exports = {
         'blue-5': 'hsla(234, 51%, 16%, 1)',
         'black-1': 'hsla(202, 0%, 3%, 1)',
         'yellow-1': 'hsla(41, 99%, 47%, 1)',
+        'yellow-2': 'hsla(38, 100%, 93%, 1)',
         'red-1': 'hsla(10, 69%, 60%, 1)',
         'gray-1': 'hsla(220, 7%, 44%, 1)',
         'light-blue-1': 'hsla(203, 74%, 63%, 1)',

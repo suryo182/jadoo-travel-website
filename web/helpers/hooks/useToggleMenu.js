@@ -10,22 +10,19 @@ export default function useToggleMenu() {
     if (navToggle) {
       navToggle.addEventListener('click', () => {
         console.log(navMenu, 'nav toggle clicked');
-        navMenu.classList.remove('-top-150%');
-        navMenu.classList.add('show-menu');
+        navMenu.style.top = '0';
 
-        document.body.classList.remove('show-scroll');
-        document.body.classList.add('hide-scroll');
+        document.documentElement.style.overflow = 'hidden';
       });
     }
 
     if (navClose) {
       navClose.addEventListener('click', () => {
         console.log('nav close cliked');
-        navMenu.classList.add('-top-150%');
         navMenu.classList.remove('show-menu');
+        navMenu.style.top = '-150%';
 
-        document.body.classList.remove('hide-scroll');
-        document.body.classList.add('show-scroll');
+        document.documentElement.style.overflow = 'auto';
       });
     }
 
