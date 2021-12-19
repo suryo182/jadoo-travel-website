@@ -192,7 +192,7 @@ const IndexPage = () => {
               </a>
             </div>
           </div>
-          <div className="relative mt-4 md:mt-0">
+          <div className="relative mt-4 md:mt-0 overflow-hidden">
             <svg
               viewBox="0 0 167 154"
               fill="none"
@@ -805,12 +805,12 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section className="px-16 py-8 md:px-36 md:py-16 mb-44 rounded-bl-5 rounded-br-5 rounded-tr-5 rounded-tl-32.25 subscribe relative">
+        <section className="px-16 py-8 sm:py-8 md:px-36 md:py-16 mb-20 md:mb-44 rounded-bl-5 rounded-br-5 rounded-tr-5 rounded-tl-32.25 subscribe relative">
           <img
             src={subLogo}
-            className="absolute right-0 transform -translate-y-1/4 translate-x-1/4 top-0"
+            className="absolute w-12 h-12 md:w-auto md:h-auto right-0 transform -translate-y-1/4 translate-x-1/4 top-0"
           />
-          <h3 className="text-center font-poppins text-base md:text-3xl font-semibold text-blue-1 lg:leading-13.5 mb-20">
+          <h3 className="text-center font-poppins text-sm sm:text-base md:text-3xl font-semibold text-blue-1 lg:leading-13.5 mb-20">
             Subscribe to get information, latest news and other <br />
             interesting offers about Jadoo
           </h3>
@@ -844,7 +844,7 @@ const IndexPage = () => {
                 placeholder="Your Email"
               />
             </div>
-            <button className="py-1 md:py-5 px-6 md:px-12 bg-button-subscribe rounded-2.5 font-semibold text-base md:text-lg font-open-sans text-white">
+            <button className="py-1 md:py-5 px-2 sm:px-6 md:px-12 bg-button-subscribe rounded-2.5 font-semibold text-sm sm:text-base md:text-lg font-open-sans text-white">
               Subscribe
             </button>
           </div>
@@ -852,7 +852,7 @@ const IndexPage = () => {
       </main>
 
       <footer className="sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mb-24 px-10">
-        <div className="grid grid-cols-footer-grid mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-footer-grid mb-20 gap-y-4 md:gap-y-0">
           <div>
             <img src={footerLogo} className="w-38 h-auto mb-3" />
             <span className="font-poppins text-xs font-medium text-blue-1">
@@ -860,43 +860,47 @@ const IndexPage = () => {
             </span>
           </div>
           <div>
-            <h3 className="mb-8 font-bold text-xl">Company</h3>
-            <ul className="flex flex-col gap-y-3">
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+            <h3 className="mb-4 md:mb-8 font-bold text-md md:text-xl">
+              Company
+            </h3>
+            <ul className="flex flex-col gap-y-1 md:gap-y-3">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 About
               </li>
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Career
               </li>
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Mobile
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-8 font-bold text-xl">Contact</h3>
-            <ul className="flex flex-col gap-y-3">
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+            <h3 className="mb-4 md:mb-8 font-bold text-md md:text-xl">
+              Contact
+            </h3>
+            <ul className="flex flex-col gap-y-1 md:gap-y-3">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Help/FAQ
               </li>
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Press
               </li>
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Affiliates
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="mb-8 font-bold text-xl">More</h3>
-            <ul className="flex flex-col gap-y-3">
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+            <h3 className="mb-4 md:mb-8 font-bold text-md md:text-xl">More</h3>
+            <ul className="flex flex-col gap-y-1 md:gap-y-3">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Airlinefees
               </li>
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Airline
               </li>
-              <li className="text-blue-1 font-poppins text-lg cursor-pointer">
+              <li className="text-blue-1 font-poppins text-base md:text-md cursor-pointer">
                 Low fare tips
               </li>
             </ul>

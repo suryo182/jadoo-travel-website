@@ -1,6 +1,7 @@
 import { useLayoutEffect } from 'react';
 
 export default function useToggleMenu() {
+  console.log('use toggle menu');
   useLayoutEffect(() => {
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
@@ -8,6 +9,8 @@ export default function useToggleMenu() {
 
     if (navToggle) {
       navToggle.addEventListener('click', () => {
+        console.log(navMenu, 'nav toggle clicked');
+        navMenu.classList.remove('-top-150%');
         navMenu.classList.add('show-menu');
 
         document.body.classList.remove('show-scroll');
@@ -17,6 +20,8 @@ export default function useToggleMenu() {
 
     if (navClose) {
       navClose.addEventListener('click', () => {
+        console.log('nav close cliked');
+        navMenu.classList.add('-top-150%');
         navMenu.classList.remove('show-menu');
 
         document.body.classList.remove('hide-scroll');
