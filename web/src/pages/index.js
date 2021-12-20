@@ -53,7 +53,7 @@ const IndexPage = () => {
         id="header"
         className="fixed top-0 left-0 w-full z-100 transition-all duration-300"
       >
-        <nav className="nav px-4 max-w-screen-sm sm:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between h-14">
+        <nav className="nav px-4 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto flex justify-between h-14">
           <a className="w-20">
             <svg
               viewBox="0 0 116 35"
@@ -87,30 +87,27 @@ const IndexPage = () => {
               />
             </svg>
           </a>
-          <div
-            className="flex flex-col md:flex-row gap-y-8 gap-x-11 bg-yellow-2 items-center fixed h-full w-full left-0 py-14 md:py-3 px-0 z-50 -top-150% transition-all duration-300"
-            id="nav-menu"
-          >
-            <div className="flex flex-col md:flex-row gap-y-8 gap-x-20">
-              <ul className="flex flex-col md:flex-row gap-x-12 gap-y-8 items-center">
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
+          <div className="nav__menu" id="nav-menu">
+            <div className="flex flex-col md:flex-row gap-y-8 gap-x-4 lg:gap-x-20">
+              <ul className="flex flex-col md:flex-row gap-x-4 lg:gap-x-12 gap-y-8 items-center mr-10">
+                <li className="cursor-pointer font-open-sans text-base font-bold leading-1.4375rem text-blue-2">
                   Destinations
                 </li>
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
+                <li className="cursor-pointer font-open-sans text-base font-bold leading-1.4375rem text-blue-2">
                   Hotels
                 </li>
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
+                <li className="cursor-pointer font-open-sans text-base font-bold leading-1.4375rem text-blue-2">
                   Flights
                 </li>
-                <li className="cursor-pointer font-open-sans text-1.0625rem font-bold leading-1.4375rem text-blue-2">
+                <li className="cursor-pointer font-open-sans text-base font-bold leading-1.4375rem text-blue-2">
                   Bookings
                 </li>
               </ul>
-              <div className="flex flex-col md:flex-row w-max gap-y-8 gap-x-12">
-                <button className="cursor-pointer font-open-sans text-1.0625rem font-bold text-blue-2">
+              <div className="flex flex-col md:flex-row w-max gap-y-8 gap-x-4 lg:gap-x-12 items-center mr-10">
+                <button className="cursor-pointer font-open-sans text-base font-bold text-blue-2 h-10">
                   Login
                 </button>
-                <button className="cursor-pointer font-open-sans text-1.0625rem font-bold text-blue-2 border rounded-0.3125remrem border-primary px-5 py-2">
+                <button className="cursor-pointer font-open-sans text-base font-bold text-blue-2 border rounded-0.3125remrem border-primary px-5 h-10">
                   Sign Up
                 </button>
               </div>
@@ -140,18 +137,18 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center md:hidden">
             <img
               src={hamburgerLogo}
-              className="w-7 h-auto cursor-pointer md:hidden"
+              className="w-7 h-auto cursor-pointer"
               id="nav-toggle"
             />
           </div>
         </nav>
       </header>
 
-      <main className="sm:max-w-screen-sm px-4 md:px-6 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-14">
-        <section className="grid sm:grid-cols-1 md:grid-cols-2 mb-24">
+      <main className="md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto mt-14">
+        <section className="grid sm:grid-cols-1 md:grid-cols-2 mb-24 px-4">
           <div className="pt-8 md:pt-24">
             <span className="font-poppins uppercase text-red-1 text-xs sm:text-base md:text-lg font-bold block mb-5 text-center md:text-left">
               Best Destinations around the world
@@ -194,7 +191,7 @@ const IndexPage = () => {
               </a>
             </div>
           </div>
-          <div className="relative mt-4 md:mt-0 overflow-hidden">
+          <div className="relative mt-4 md:mt-0 md:pt-12 overflow-hidden">
             <svg
               viewBox="0 0 167 154"
               fill="none"
