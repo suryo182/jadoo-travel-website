@@ -89,7 +89,7 @@ const IndexPage = () => {
           </a>
           <div className="nav__menu" id="nav-menu">
             <div className="flex flex-col md:flex-row gap-y-8 gap-x-4 lg:gap-x-20">
-              <ul className="flex flex-col md:flex-row gap-x-4 lg:gap-x-12 gap-y-8 items-center mr-10">
+              <ul className="flex flex-col md:flex-row gap-x-4 lg:gap-x-12 gap-y-8 items-center md:mr-10">
                 <li className="cursor-pointer font-open-sans text-base font-bold leading-1.4375rem text-blue-2">
                   Destinations
                 </li>
@@ -103,7 +103,7 @@ const IndexPage = () => {
                   Bookings
                 </li>
               </ul>
-              <div className="flex flex-col md:flex-row w-max gap-y-8 gap-x-4 lg:gap-x-12 items-center mr-10">
+              <div className="flex flex-col md:flex-row w-max gap-y-8 gap-x-4 lg:gap-x-12 items-center md:mr-10">
                 <button className="cursor-pointer font-open-sans text-base font-bold text-blue-2 h-10">
                   Login
                 </button>
